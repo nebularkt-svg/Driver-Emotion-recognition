@@ -1,0 +1,33 @@
+{
+  "fold_train_acc": [
+    0.9979959919839679,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "fold_val_acc": [
+    0.784,
+    0.688,
+    0.664,
+    0.68,
+    0.717741935483871
+  ],
+  "mean_train_acc": 0.9995991983967937,
+  "mean_val_acc": 0.7067483870967742,
+  "std_val_acc": 0.04238648990580442,
+  "best_fold": 1,
+  "best_val_acc": 0.784,
+  "config": {
+    "num_keyframes": 5,
+    "convlstm_filters": 8,
+    "convlstm_kernel": 1,
+    "dense1": 2048,
+    "dense2": 1024,
+    "batch_size": 32,
+    "epochs": 200,
+    "learning_rate": 0.001,
+    "folds": 5,
+    "random_state": 42
+  }
+}
