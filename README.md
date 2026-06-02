@@ -46,12 +46,7 @@ git remote add origin https://github.com/OWNER/REPO.git
 git push -u origin main
 ```
 
-常规模型随 Git LFS 推送，去重后约 2.56 GiB。超过 500 MiB 的 CK+ 122 和 RAVDESS 122 权重放在本地 `release-assets/`，共 12 个文件、约 9.05 GiB，避免这组大文件占用 Git LFS 额度。推送后，在已登录 GitHub CLI 的环境中发布该目录内的权重：
-
-```powershell
-$recognitionAssets = Get-ChildItem -LiteralPath release-assets -File | Select-Object -ExpandProperty FullName
-gh release create models-v1 @recognitionAssets --target main --title "Archived training checkpoints"
-```
+常规模型随 Git LFS 推送，去重后约 2.56 GiB。CK+ 122 和 RAVDESS 122 的 12 个大型权重共约 9.05 GiB，可从 [models-v1](https://github.com/nebularkt-svg/Driver-Emotion-recognition/releases/tag/models-v1) 下载。
 
 要恢复这些权重，可在克隆后的仓库运行：
 
