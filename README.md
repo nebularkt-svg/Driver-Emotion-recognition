@@ -1,54 +1,66 @@
-# Driver-Emotion-recognition
+# CalmWheel Driver Emotion Recognition
 
-Real-time, seven-class driver facial expression recognition for CalmWheel, an emotion-aware driving companion. Uses MediaPipe blendshapes and PyTorch, with archived model iterations, training checkpoints, and evaluation results.
+A real-time webcam demo that classifies seven facial expressions for **CalmWheel**, a COMPSYS 731 driver companion prototype. Its inference pipeline uses MediaPipe Face Landmarker, 52 facial blendshape scores, and a calibrated PyTorch attention classifier. The archive also preserves the training experiments and earlier model designs.
 
-CalmWheel 的摄像头面部表情识别模块，以及课程项目中保留的识别版本、训练记录和模型权重。
+[Run the webcam demo](#run-the-webcam-demo) · [Explore model versions](#versions-and-experiments) · [Download archived weights](#model-downloads)
 
-## 运行结题演示版
+## CalmWheel project
 
-安装 Python 3.11 和 Git LFS。在仓库根目录用 PowerShell 执行：
+| Component | Start here |
+| --- | --- |
+| Webcam inference | [Runtime code and demo weights](runtime/) |
+| Model comparison | [Training methods, metrics, and curves](https://github.com/nebularkt-svg/Driver-Emotion-Model-Benchmarks) |
+| Dialogue and voice | [Emotion-aware LLM module](https://github.com/nebularkt-svg/Driver-Companion-LLM) |
+
+## Recognition pipeline
+
+The demo uses MediaPipe Face Landmarker to extract **52 facial blendshape scores** from webcam frames. A calibrated PyTorch Blendshape Attention classifier scores seven categories, and OpenCV displays the predicted class and confidence.
+
+**Classes:** angry, disgust, fear, happy, neutral, sad, and surprise.
+
+## Run the webcam demo
+
+Use Python 3.11, Git LFS, and a webcam. The PowerShell commands below download only the demo's LFS files, so you can run it without fetching the full training archive.
 
 ```powershell
-git lfs pull
+$env:GIT_LFS_SKIP_SMUDGE = "1"
+git clone https://github.com/nebularkt-svg/Driver-Emotion-recognition.git
+Remove-Item Env:GIT_LFS_SKIP_SMUDGE
+cd Driver-Emotion-recognition
+git lfs pull --include="runtime/**" --exclude=""
+
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r runtime/requirements.txt
 Push-Location runtime
-..\.venv\Scripts\python.exe realtime_fer.py --checkpoint blendshape_attn_calibrated.pt --landmarker face_landmarker.task --camera 0
+..\.venv\Scripts\python.exe realtime_fer.py --camera 0
 Pop-Location
 ```
 
-结题演示快照中的实时入口默认加载 `blendshape_attn_calibrated.pt`。MediaPipe Face Landmarker 提取 blendshape，校准后的 Attention 模型分类，OpenCV 显示摄像头结果。按 Q 退出。历史演示代码会在找不到训练缓存时提示未重新校准，运行命令已指定预校准权重。
+Use `--camera 1` to select a second webcam. Press **Q** or **Esc** to exit. The demo ships with a pre-calibrated checkpoint and may print a message about skipping recalibration when no training cache is present.
 
-## 版本与实验
+## Versions and experiments
 
-| 目录 | 内容 |
+| Location | Contents |
 | --- | --- |
-| [runtime](runtime/) | 结题演示使用的实时识别、预校准权重和 MediaPipe 模型 |
-| [versions/cnn-yolov8](versions/cnn-yolov8/) | SHRI 导出的早期 CNN 和 YOLOv8 人脸检测、训练脚本及存档权重 |
-| [versions/driver-companion](versions/driver-companion/) | Driver Companion 快照，含基准测试与图像识别 |
-| [versions/recognition-snapshot](versions/recognition-snapshot/) | 独立识别快照，含实时图像与 blendshape 入口，以及训练和数据集脚本 |
-| [versions/calmwheel](versions/calmwheel/) 和 [versions/fer-bridge](versions/fer-bridge/) | 产品整合阶段的摄像头识别接口、语音识别辅助脚本和训练快照 |
-| [versions/mesh](versions/mesh/) | 结题演示前的 MediaPipe Face Mesh 与 Blendshape Attention 快照 |
-| [versions/final-demo-image](versions/final-demo-image/) | 结题演示目录中仍保留的图像模型权重 |
-| [versions/archive-variants](versions/archive-variants/) | ZIP 中与已解压副本有内容差异的代码和权重 |
-| [experiments/runs](experiments/runs/) | CK+/RAVDESS 的交叉验证权重、标签和 scaler，以及 EmoNet、几何特征、Blendshape MLP 和 Attention 的训练日志、指标及图表 |
+| [Final demo](runtime/) | Webcam inference, pre-calibrated attention weights, and the MediaPipe model |
+| [Early CNN and YOLOv8](versions/cnn-yolov8/) | Image classifier and face detector prototypes, training scripts, and checkpoints |
+| [Driver Companion](versions/driver-companion/) and [recognition snapshot](versions/recognition-snapshot/) | Standalone inference, dataset preparation, training, and benchmark scripts |
+| [CalmWheel](versions/calmwheel/), [FER bridge](versions/fer-bridge/), and [mesh](versions/mesh/) | Recognition integration snapshots and MediaPipe iterations |
+| [Demo image weights](versions/final-demo-image/) and [ZIP variants](versions/archive-variants/) | Alternate image checkpoints and variants recovered from source archives |
+| [Training runs](experiments/runs/) | CK+ and RAVDESS cross-validation, EmoNet, geometric features, and Blendshape MLP and Attention results |
 
-版本目录名依据工作区来源命名。历史模型和未成为结题默认入口的实验均保留，原始训练报告中的指标沿用各自的数据划分和评估方法。历史运行环境和第三方数据集需按相应版本的脚本及说明准备。识别仓库只收录识别侧代码和产物，历史整合说明中的 LLM、界面及硬件启动步骤需要原集成项目。ConvLSTM 交叉验证目录包含训练配置、指标和权重，工作区中未找到对应的训练源码。其余训练脚本可在各版本目录的 TrainVla 中查阅。可在独立识别快照下运行 `python TrainVla/run_all_benchmarks.py --help` 查看基准入口。
+Historical results use the original data splits and evaluation protocols for each run. Some snapshots depend on the original companion application's UI or speech integration. The ConvLSTM archive includes configurations, metrics, and weights. Its training source was unavailable in the workspace. Dataset images and training caches are excluded.
 
-[模型清单](model-manifest.csv)记录每个二进制模型的目标路径、包内位置、大小、SHA-256 和原始来源。数据集照片、训练缓存、密钥、个人演示视频和无关文件未收录。公开发布前请按原来源确认第三方模型和代码的再分发许可。
+For training and benchmark entry points, see [TrainVla](versions/recognition-snapshot/TrainVla/) and the [dataset preparation scripts](versions/recognition-snapshot/Dataset/).
 
-## 推送到 GitHub
+## Model downloads
 
-创建空的 GitHub 仓库，在本目录替换远程地址并执行：
+| Files | Access |
+| --- | --- |
+| Demo weights and most historical checkpoints | Git LFS. Run `git lfs pull` to fetch the complete LFS collection, about 2.56 GiB. |
+| CK+ 122 and RAVDESS 122 ConvLSTM checkpoints | [Release models-v1](https://github.com/nebularkt-svg/Driver-Emotion-recognition/releases/tag/models-v1). Each experiment includes five folds and its best checkpoint. The 12 files total about 9.05 GiB. |
 
-```powershell
-git remote add origin https://github.com/OWNER/REPO.git
-git push -u origin main
-```
-
-常规模型随 Git LFS 推送，去重后约 2.56 GiB。CK+ 122 和 RAVDESS 122 的 12 个大型权重共约 9.05 GiB，可从 [models-v1](https://github.com/nebularkt-svg/Driver-Emotion-recognition/releases/tag/models-v1) 下载。
-
-要恢复这些权重，可在克隆后的仓库运行：
+The [model manifest](model-manifest.csv) lists each file's source, destination, size, and SHA-256 checksum. To download and restore the Release checkpoints to their experiment directories, run the following from the repository root with GitHub CLI installed.
 
 ```powershell
 gh release download models-v1 --dir release-assets
@@ -61,5 +73,3 @@ Import-Csv model-manifest.csv | Where-Object package_path -Like 'release-assets/
     Copy-Item -LiteralPath $weight.package_path -Destination $weight.model_path
 }
 ```
-
-[Git LFS 额度](https://docs.github.com/en/billing/concepts/product-billing/git-lfs) · [GitHub Release 附件限制](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
