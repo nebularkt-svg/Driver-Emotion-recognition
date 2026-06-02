@@ -1,4 +1,6 @@
-# CalmWheel 驾驶员面部表情识别
+# Driver-Emotion-recognition
+
+Real-time, seven-class driver facial expression recognition for CalmWheel, an emotion-aware driving companion. Uses MediaPipe blendshapes and PyTorch, with archived model iterations, training checkpoints, and evaluation results.
 
 CalmWheel 的摄像头面部表情识别模块，以及课程项目中保留的识别版本、训练记录和模型权重。
 
