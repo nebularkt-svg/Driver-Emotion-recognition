@@ -1,0 +1,37 @@
+# CalmWheel [mesh] — 依赖列表
+# 安装：pip install -r requirements.txt
+
+# 核心
+requests
+python-dotenv
+
+# UI
+pillow
+opencv-python
+
+# TTS
+edge-tts
+pygame
+
+# STT
+sounddevice
+faster-whisper
+
+# FER（情绪识别）
+torch
+torchvision
+numpy
+mediapipe
+scikit-learn
+tqdm
+
+# 数据集预处理（仅训练时需要）
+datasets
+huggingface_hub
+
+# 训练评估（仅训练时需要）
+matplotlib
+seaborn
+
+# 性能监控（可选）
+psutil

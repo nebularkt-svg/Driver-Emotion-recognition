@@ -1,0 +1,44 @@
+# CalmWheel — Full Requirements
+# Install with: pip install -r requirements.txt
+ 
+#Core
+requests
+python-dotenv
+ 
+#UI
+pillow
+opencv-python
+ 
+#TTS
+edge-tts
+pygame
+ 
+# STT
+sounddevice
+faster-whisper
+ 
+#FER
+torch
+torchvision
+numpy
+ 
+torch
+torchvision
+numpy
+opencv-python
+Pillow
+tqdm
+
+# Dataset preprocessing
+mediapipe
+datasets
+huggingface_hub
+
+# Training + evaluation
+scikit-learn
+matplotlib
+seaborn
+
+# Benchmark logger
+psutil
+nvitop

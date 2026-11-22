@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+key.txt
+*.pem
+*.zip
+/cache/
+**/cache/
+**/datasets/
+**/Dataset/data/
+**/Dataset/cache/
+/release-assets/
+/experiments/runs/ckplus-122/*.pt
+/experiments/runs/ravdess_122/*.pt

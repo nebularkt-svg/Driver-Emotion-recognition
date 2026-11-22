@@ -1,0 +1,33 @@
+{
+  "per_dataset": [
+    {
+      "dataset": "CK",
+      "n_sequences": 327,
+      "n_classes": 7,
+      "train_acc": 0.974803310812787,
+      "test_acc": 0.9511888111888112,
+      "test_std": 0.026032026228369216,
+      "fold_test_acc": [
+        0.9090909090909091,
+        0.9545454545454546,
+        0.9384615384615385,
+        0.9692307692307692,
+        0.9846153846153847
+      ],
+      "paper_acc": null
+    }
+  ],
+  "composite": null,
+  "config": {
+    "num_keyframes": 5,
+    "convlstm_filters": 8,
+    "convlstm_kernel": 1,
+    "dense1": 2048,
+    "dense2": 1024,
+    "batch_size": 32,
+    "epochs": 200,
+    "learning_rate": 0.001,
+    "folds": 5,
+    "random_state": 42
+  }
+}

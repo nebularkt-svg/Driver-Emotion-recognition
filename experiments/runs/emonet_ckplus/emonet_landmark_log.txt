@@ -1,0 +1,111 @@
+12:37:27  INFO  ═══ Benchmark started: emonet_landmark ═══
+12:37:27  INFO  Output dir: /home/soshi/PycharmProjects/Driver-Companion/emotion-reco/runs/emonet_ckplus
+12:37:27  INFO  Hardware: {"cpu_count_logical": 12, "cpu_count_physical": 6, "ram_total_gb": 15.48, "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU", "gpu_count": 1, "gpu_driver_version": "595.71.05", "cuda_version": "13.0", "torch_version": "2.11.0+cu130", "nvitop_available": true}
+12:37:27  INFO  Model parameters: 601,895  (0.602 M)
+12:37:28  INFO  Epoch 1 started
+12:37:29  INFO  Epoch   1 done in   0.7s  train_loss=1.9181  train_acc=0.2073  val_loss=1.9220  val_acc=0.1111  lr=5.00e-04  [cpu=20% ram=7.8GB gpu=5% gpumem=0.29GB]
+12:37:29  INFO  Epoch 2 started
+12:37:29  INFO  Epoch   2 done in   0.3s  train_loss=1.9316  train_acc=0.1667  val_loss=1.9082  val_acc=0.0952  lr=4.99e-04  [cpu=45% ram=7.8GB gpu=6% gpumem=0.29GB]
+12:37:29  INFO  Epoch 3 started
+12:37:29  INFO  Epoch   3 done in   0.3s  train_loss=1.8961  train_acc=0.1585  val_loss=1.8936  val_acc=0.1429  lr=4.98e-04  [cpu=40% ram=7.8GB gpu=6% gpumem=0.29GB]
+12:37:29  INFO  Epoch 4 started
+12:37:29  INFO  Epoch   4 done in   0.3s  train_loss=1.8357  train_acc=0.1951  val_loss=1.8861  val_acc=0.1429  lr=4.97e-04  [cpu=46% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:29  INFO  Epoch 5 started
+12:37:30  INFO  Epoch   5 done in   0.3s  train_loss=1.8531  train_acc=0.1911  val_loss=1.9187  val_acc=0.1429  lr=4.95e-04  [cpu=40% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:30  INFO  Epoch 6 started
+12:37:30  INFO  Epoch   6 done in   0.3s  train_loss=1.8006  train_acc=0.2398  val_loss=1.9535  val_acc=0.1905  lr=4.93e-04  [cpu=51% ram=7.8GB gpu=3% gpumem=0.29GB]
+12:37:30  INFO  Epoch 7 started
+12:37:30  INFO  Epoch   7 done in   0.3s  train_loss=1.7189  train_acc=0.2846  val_loss=1.9953  val_acc=0.1905  lr=4.91e-04  [cpu=48% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:30  INFO  Epoch 8 started
+12:37:31  INFO  Epoch   8 done in   0.3s  train_loss=1.7179  train_acc=0.2927  val_loss=2.0285  val_acc=0.1429  lr=4.88e-04  [cpu=42% ram=7.9GB gpu=5% gpumem=0.29GB]
+12:37:31  INFO  Epoch 9 started
+12:37:31  INFO  Epoch   9 done in   0.3s  train_loss=1.6729  train_acc=0.2846  val_loss=2.1064  val_acc=0.1429  lr=4.85e-04  [cpu=41% ram=7.9GB gpu=10% gpumem=0.29GB]
+12:37:31  INFO  Epoch 10 started
+12:37:31  INFO  Epoch  10 done in   0.3s  train_loss=1.5824  train_acc=0.3496  val_loss=2.2512  val_acc=0.1429  lr=4.81e-04  [cpu=41% ram=7.9GB gpu=10% gpumem=0.29GB]
+12:37:31  INFO  Epoch 11 started
+12:37:31  INFO  Epoch  11 done in   0.3s  train_loss=1.5749  train_acc=0.3455  val_loss=2.2982  val_acc=0.1429  lr=4.77e-04  [cpu=47% ram=7.9GB gpu=10% gpumem=0.29GB]
+12:37:31  INFO  Epoch 12 started
+12:37:32  INFO  Epoch  12 done in   0.3s  train_loss=1.5494  train_acc=0.3780  val_loss=2.1896  val_acc=0.1746  lr=4.73e-04  [cpu=41% ram=7.9GB gpu=10% gpumem=0.29GB]
+12:37:32  INFO  Epoch 13 started
+12:37:32  INFO  Epoch  13 done in   0.3s  train_loss=1.5088  train_acc=0.3821  val_loss=2.0227  val_acc=0.2222  lr=4.68e-04  [cpu=40% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:32  INFO  Epoch 14 started
+12:37:32  INFO  Epoch  14 done in   0.3s  train_loss=1.4446  train_acc=0.3902  val_loss=2.4380  val_acc=0.1905  lr=4.63e-04  [cpu=46% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:32  INFO  Epoch 15 started
+12:37:33  INFO  Epoch  15 done in   0.3s  train_loss=1.4228  train_acc=0.3943  val_loss=1.8827  val_acc=0.2540  lr=4.58e-04  [cpu=42% ram=7.9GB gpu=6% gpumem=0.29GB]
+12:37:33  INFO  Epoch 16 started
+12:37:33  INFO  Epoch  16 done in   0.3s  train_loss=1.3665  train_acc=0.4593  val_loss=1.6541  val_acc=0.3175  lr=4.52e-04  [cpu=46% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:33  INFO  Epoch 17 started
+12:37:33  INFO  Epoch  17 done in   0.3s  train_loss=1.4058  train_acc=0.4228  val_loss=2.5257  val_acc=0.1429  lr=4.46e-04  [cpu=48% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:33  INFO  Epoch 18 started
+12:37:33  INFO  Epoch  18 done in   0.3s  train_loss=1.4166  train_acc=0.4268  val_loss=1.3808  val_acc=0.3810  lr=4.40e-04  [cpu=41% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:33  INFO  Epoch 19 started
+12:37:34  INFO  Epoch  19 done in   0.3s  train_loss=1.3967  train_acc=0.4431  val_loss=1.2861  val_acc=0.4762  lr=4.34e-04  [cpu=48% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:34  INFO  Epoch 20 started
+12:37:34  INFO  Epoch  20 done in   0.3s  train_loss=1.3885  train_acc=0.4472  val_loss=2.0465  val_acc=0.1905  lr=4.27e-04  [cpu=50% ram=7.9GB gpu=4% gpumem=0.29GB]
+12:37:34  INFO  Epoch 21 started
+12:37:34  INFO  Epoch  21 done in   0.3s  train_loss=1.2860  train_acc=0.4919  val_loss=1.4115  val_acc=0.4762  lr=4.20e-04  [cpu=48% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:34  INFO  Epoch 22 started
+12:37:35  INFO  Epoch  22 done in   0.3s  train_loss=1.4668  train_acc=0.4187  val_loss=2.8420  val_acc=0.2698  lr=4.13e-04  [cpu=40% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:35  INFO  Epoch 23 started
+12:37:35  INFO  Epoch  23 done in   0.3s  train_loss=1.2990  train_acc=0.5081  val_loss=1.7013  val_acc=0.3810  lr=4.05e-04  [cpu=42% ram=8.0GB gpu=2% gpumem=0.29GB]
+12:37:35  INFO  Epoch 24 started
+12:37:35  INFO  Epoch  24 done in   0.3s  train_loss=1.3508  train_acc=0.4431  val_loss=1.3113  val_acc=0.3968  lr=3.97e-04  [cpu=41% ram=8.0GB gpu=2% gpumem=0.29GB]
+12:37:35  INFO  Epoch 25 started
+12:37:36  INFO  Epoch  25 done in   0.3s  train_loss=1.2913  train_acc=0.4715  val_loss=1.2441  val_acc=0.4921  lr=3.89e-04  [cpu=42% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:36  INFO  Epoch 26 started
+12:37:36  INFO  Epoch  26 done in   0.3s  train_loss=1.2157  train_acc=0.5528  val_loss=1.2588  val_acc=0.5714  lr=3.81e-04  [cpu=48% ram=8.0GB gpu=5% gpumem=0.29GB]
+12:37:36  INFO  Epoch 27 started
+12:37:36  INFO  Epoch  27 done in   0.3s  train_loss=1.2503  train_acc=0.5325  val_loss=1.6302  val_acc=0.3968  lr=3.72e-04  [cpu=47% ram=8.0GB gpu=5% gpumem=0.29GB]
+12:37:36  INFO  Epoch 28 started
+12:37:36  INFO  Epoch  28 done in   0.3s  train_loss=1.1798  train_acc=0.5976  val_loss=1.2641  val_acc=0.4603  lr=3.64e-04  [cpu=40% ram=8.0GB gpu=12% gpumem=0.29GB]
+12:37:36  INFO  Epoch 29 started
+12:37:37  INFO  Epoch  29 done in   0.3s  train_loss=1.1323  train_acc=0.6382  val_loss=1.4448  val_acc=0.4921  lr=3.55e-04  [cpu=42% ram=8.0GB gpu=12% gpumem=0.29GB]
+12:37:37  INFO  Epoch 30 started
+12:37:37  INFO  Epoch  30 done in   0.3s  train_loss=1.0755  train_acc=0.6626  val_loss=1.1647  val_acc=0.4921  lr=3.46e-04  [cpu=41% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:37  INFO  Epoch 31 started
+12:37:37  INFO  Epoch  31 done in   0.3s  train_loss=1.0027  train_acc=0.6870  val_loss=0.9731  val_acc=0.7302  lr=3.37e-04  [cpu=47% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:37  INFO  Epoch 32 started
+12:37:38  INFO  Epoch  32 done in   0.3s  train_loss=0.9576  train_acc=0.6870  val_loss=1.2268  val_acc=0.5873  lr=3.28e-04  [cpu=46% ram=8.0GB gpu=5% gpumem=0.29GB]
+12:37:38  INFO  Epoch 33 started
+12:37:38  INFO  Epoch  33 done in   0.3s  train_loss=0.9710  train_acc=0.6789  val_loss=0.9287  val_acc=0.7143  lr=3.18e-04  [cpu=41% ram=8.0GB gpu=10% gpumem=0.29GB]
+12:37:38  INFO  Epoch 34 started
+12:37:38  INFO  Epoch  34 done in   0.3s  train_loss=0.8820  train_acc=0.7154  val_loss=1.0529  val_acc=0.6349  lr=3.09e-04  [cpu=40% ram=8.0GB gpu=10% gpumem=0.29GB]
+12:37:38  INFO  Epoch 35 started
+12:37:38  INFO  Epoch  35 done in   0.3s  train_loss=0.9144  train_acc=0.6829  val_loss=1.2753  val_acc=0.5556  lr=2.99e-04  [cpu=43% ram=8.0GB gpu=9% gpumem=0.29GB]
+12:37:38  INFO  Epoch 36 started
+12:37:39  INFO  Epoch  36 done in   0.3s  train_loss=0.9630  train_acc=0.6667  val_loss=1.0468  val_acc=0.6349  lr=2.90e-04  [cpu=48% ram=8.0GB gpu=9% gpumem=0.29GB]
+12:37:39  INFO  Epoch 37 started
+12:37:39  INFO  Epoch  37 done in   0.3s  train_loss=0.9367  train_acc=0.7195  val_loss=0.8250  val_acc=0.7619  lr=2.80e-04  [cpu=40% ram=7.9GB gpu=2% gpumem=0.29GB]
+12:37:39  INFO  Epoch 38 started
+12:37:39  INFO  Epoch  38 done in   0.3s  train_loss=0.9362  train_acc=0.7276  val_loss=1.1769  val_acc=0.5873  lr=2.70e-04  [cpu=48% ram=8.0GB gpu=2% gpumem=0.29GB]
+12:37:39  INFO  Epoch 39 started
+12:37:40  INFO  Epoch  39 done in   0.3s  train_loss=0.9623  train_acc=0.6707  val_loss=1.1208  val_acc=0.5397  lr=2.60e-04  [cpu=41% ram=8.0GB gpu=5% gpumem=0.29GB]
+12:37:40  INFO  Epoch 40 started
+12:37:40  INFO  Epoch  40 done in   0.3s  train_loss=0.9010  train_acc=0.6951  val_loss=0.8358  val_acc=0.6984  lr=2.50e-04  [cpu=41% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:40  INFO  Epoch 41 started
+12:37:40  INFO  Epoch  41 done in   0.3s  train_loss=0.8945  train_acc=0.7358  val_loss=1.0255  val_acc=0.6667  lr=2.41e-04  [cpu=47% ram=7.9GB gpu=11% gpumem=0.29GB]
+12:37:40  INFO  Epoch 42 started
+12:37:40  INFO  Epoch  42 done in   0.3s  train_loss=0.9178  train_acc=0.6951  val_loss=0.9157  val_acc=0.7143  lr=2.31e-04  [cpu=43% ram=7.9GB gpu=2% gpumem=0.29GB]
+12:37:40  INFO  Epoch 43 started
+12:37:41  INFO  Epoch  43 done in   0.3s  train_loss=0.8181  train_acc=0.7886  val_loss=0.9355  val_acc=0.6667  lr=2.21e-04  [cpu=39% ram=7.9GB gpu=2% gpumem=0.29GB]
+12:37:41  INFO  Epoch 44 started
+12:37:41  INFO  Epoch  44 done in   0.3s  train_loss=0.8242  train_acc=0.7520  val_loss=1.2330  val_acc=0.4762  lr=2.11e-04  [cpu=42% ram=8.0GB gpu=2% gpumem=0.29GB]
+12:37:41  INFO  Epoch 45 started
+12:37:41  INFO  Epoch  45 done in   0.3s  train_loss=0.8494  train_acc=0.7480  val_loss=1.1040  val_acc=0.6349  lr=2.02e-04  [cpu=47% ram=8.0GB gpu=2% gpumem=0.29GB]
+12:37:41  INFO  Epoch 46 started
+12:37:42  INFO  Epoch  46 done in   0.3s  train_loss=0.8288  train_acc=0.7358  val_loss=0.9540  val_acc=0.6825  lr=1.92e-04  [cpu=48% ram=8.0GB gpu=5% gpumem=0.29GB]
+12:37:42  INFO  Epoch 47 started
+12:37:42  INFO  Epoch  47 done in   0.3s  train_loss=0.7892  train_acc=0.7683  val_loss=0.7888  val_acc=0.7302  lr=1.83e-04  [cpu=43% ram=8.0GB gpu=12% gpumem=0.29GB]
+12:37:42  INFO  Epoch 48 started
+12:37:42  INFO  Epoch  48 done in   0.3s  train_loss=0.8492  train_acc=0.7195  val_loss=0.8021  val_acc=0.7302  lr=1.73e-04  [cpu=42% ram=8.0GB gpu=12% gpumem=0.29GB]
+12:37:42  INFO  Epoch 49 started
+12:37:42  INFO  Epoch  49 done in   0.3s  train_loss=0.8086  train_acc=0.7764  val_loss=0.9942  val_acc=0.6349  lr=1.64e-04  [cpu=41% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:42  INFO  Epoch 50 started
+12:37:43  INFO  Epoch  50 done in   0.3s  train_loss=0.8691  train_acc=0.6829  val_loss=0.8910  val_acc=0.7143  lr=1.55e-04  [cpu=41% ram=7.9GB gpu=3% gpumem=0.29GB]
+12:37:43  INFO  Epoch 51 started
+12:37:43  INFO  Epoch  51 done in   0.3s  train_loss=0.8206  train_acc=0.7317  val_loss=0.9460  val_acc=0.7143  lr=1.46e-04  [cpu=46% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:43  INFO  Epoch 52 started
+12:37:43  INFO  Epoch  52 done in   0.3s  train_loss=0.7875  train_acc=0.7439  val_loss=0.8875  val_acc=0.6984  lr=1.37e-04  [cpu=41% ram=8.0GB gpu=3% gpumem=0.29GB]
+12:37:45  INFO  Inference latency over 200 runs (warmup 20) — mean=0.76ms  p50=0.73ms  p95=0.87ms  → 1324.0 FPS
+12:37:45  INFO  Finished — final_acc=0.7619  f1=0.7111  best_val=0.7619  infer=0.76ms (1324.0 FPS)  train_time=15.29s
+12:37:45  INFO  Metrics JSON: runs/emonet_ckplus/emonet_landmark_metrics.json

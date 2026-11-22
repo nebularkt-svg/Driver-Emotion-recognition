@@ -1,0 +1,23 @@
+{
+  "method": "geo_61_au",
+  "best_val_acc": 0.9365079365079365,
+  "final_test_acc": 0.9365079365079365,
+  "final_weighted_f1": 0.9367243472333784,
+  "feature_dim": 3036,
+  "pair_count": 1518,
+  "landmark_subset_size": 60,
+  "grouping": true,
+  "paper_accuracy_ck+": 0.93,
+  "hyperparams": {
+    "data": "cache/ckplus_static",
+    "output": "runs/geo_static_ckplus",
+    "landmarks": 61,
+    "no_grouping": false,
+    "epochs": 80,
+    "batch": 64,
+    "lr": 0.001,
+    "dropout": 0.5,
+    "patience": 20,
+    "workers": 4
+  }
+}
